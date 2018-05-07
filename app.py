@@ -16,7 +16,8 @@ import dash_core_components as dcc
 import dash_html_components as html
 
 # Initialize Dash app (similar to Flask)
-app = Dash()
+app = Dash(__name__)
+server = app.server
 
 ###################################
 #                                 #
