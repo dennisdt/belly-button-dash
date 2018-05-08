@@ -63,7 +63,6 @@ def sample_metadata(sample):
            Samples_Metadata.GENDER, Samples_Metadata.AGE,
            Samples_Metadata.LOCATION, Samples_Metadata.BBTYPE]
 
-    
     # matches the numeric value of `SAMPLEID` from the database
     results = session.query(*sel).\
         filter(Samples_Metadata.SAMPLEID == sample[3:]).all()
@@ -199,7 +198,8 @@ app.layout = html.Div(className="container", children=[
             	),
                 html.Div(className="panel-body", id="sample-metadata", 
                 	style={
-                		'padding': "15px"                	}
+                		'padding': "15px"
+                	}
                 )
             ])
         ]),
